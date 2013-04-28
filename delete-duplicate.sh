@@ -1,8 +1,8 @@
 #!/bin/bash
+#
 
 if [ ! $1 ];then exit; fi
 
-#for file in $1/*[^\)].mp3; do
 for file in $1/*[\)].mp3; do
   #echo "$file"
   a=$(printf '%q' "`basename "$file" .mp3`")
