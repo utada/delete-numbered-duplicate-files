@@ -29,7 +29,7 @@ for file in $1/*.mp3; do
     rm -v "$file"
   else
   #  echo $a
-  #  echo $b
+    echo $b
     echo 'not exists'
    echo $b | sed 's/^ *-* *//g' >> list
   #  #echo $b >> list
@@ -38,6 +38,6 @@ for file in $1/*.mp3; do
   echo ""
 done
 
-cat list | sort > list2
+cat list | sort | uniq > list2
 mv list2 list
 
