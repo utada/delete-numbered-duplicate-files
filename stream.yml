@@ -1,1 +1,28 @@
-/home/utada/.tmuxinator/stream.yml
+# ~/.tmuxinator/stream.yml
+
+name: stream
+root: ~/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+windows:
+  - editor:
+      layout: even-vertical
+      panes:
+        - streamripper http://toronto.etn.fm:8130 -T -d ~/Music/ # etn trance
+        #- streamripper http://toronto.etn.fm:8230 -T -d ~/Music/ # etn house
+        #- streamripper http://212.7.196.96:8002 -T -d ~/Music/ # pure deephouse
+        - streamripper http://212.7.196.96:8000 -T -d ~/Music/ # pure prog
+        - streamripper http://88.191.73.231:5010 -d ~/Music/ # sence prog
+#  - server: bundle exec rails s
+#  - logs: tail -f logs/development.log
