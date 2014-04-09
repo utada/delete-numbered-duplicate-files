@@ -7,4 +7,5 @@
 ./delete-duplicate.sh pure3
 ./delete-duplicate.sh sense1
 ./delete-duplicate.sh deepmix
+./delete-duplicate.sh depth
 
